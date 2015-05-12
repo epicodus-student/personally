@@ -1,1 +1,5 @@
 <h1>Welcome to Personally</h1>
+
+<% if @user != nil %>
+  Hello <%= @user.first_name %> <%= @user.birthday %>
+<% end %>
