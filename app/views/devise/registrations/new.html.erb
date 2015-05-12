@@ -4,8 +4,18 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, :required => true %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, :required => true %>
   </div>
 
   <div class="field">
@@ -13,12 +23,49 @@
     <% if @validatable %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", :required => true %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", :required => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex, "I'm a" %><br />
+    <%= f.radio_button :sex, 'Male', :checked => true %>
+    <%= label :sex_male, 'Male' %>
+    <%= f.radio_button :sex, 'Female' %>
+    <%= label :sex_female, 'Female' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seeking_sex_type, "Seeking a" %><br />
+    <%= f.radio_button :seeking_sex_type, 'Male' %>
+    <%= label :seeking_sex_type_male, 'Male' %>
+    <%= f.radio_button :seeking_sex_type, 'Female', :checked => true %>
+    <%= label :seeking_sex_type_female, 'Female' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthday, "Your Date of Birth" %><br />
+    <%= f.date_select :birthday, order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.country_select :country, ["Philippines", "United States"], :required => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :agree_to_terms, "Do you agree with Personally's Terms & Conditions?" %><br />
+    <%= f.check_box :agree_to_terms, :required => true %>
+    <%= f.label :agree_to_terms, "Yes, I agree" %>
   </div>
 
   <div class="actions">

@@ -17,6 +17,7 @@ gem 'devise'
 gem 'arel'
 gem "paperclip", "~> 4.2"
 gem 'textacular', '~> 3.0'
+gem 'country_select'
 
 group :development, :test do
   gem 'byebug'
