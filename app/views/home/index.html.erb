@@ -2,4 +2,6 @@
 
 <% if @user != nil %>
   Hello <%= @user.first_name %> <%= @user.birthday %>
+
+  <%= link_to "View Your Profile", user_path(@user) %>
 <% end %>
