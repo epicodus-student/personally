@@ -21,7 +21,7 @@ gem 'arel'
 gem "paperclip", "~> 4.2"
 gem 'textacular', '~> 3.0'
 gem 'country_select'
-gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails42-foreigner'
+gem 'mailboxer', github: 'lacco/mailboxer'
 gem 'chosen-rails'
 
 group :development, :test do
