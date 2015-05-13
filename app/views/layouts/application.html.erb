@@ -7,9 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
   <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
@@ -26,6 +23,7 @@
       </ul>
     </div>
   </nav>
+
   <div class="container">
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>">
@@ -40,6 +38,12 @@
     <%= yield %>
 
   </div>
+
+  <footer>
+    <div class="container">
+      <p class="text-muted">Created by <a href="http://www.github.com/datureezy" target="_blank">Ron Park aka datureezy</a>.</p>
+    </div>
+  </footer>
 
 </body>
 </html>

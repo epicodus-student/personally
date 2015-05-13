@@ -3,3 +3,82 @@
 <h3>ID #<%= @user.id %></h3>
 <h4>Seeking: <%= @user.seeking_sex_type %>s</h4>
 <h4>Last Active: <%= @user.last_sign_in_at %></h4>
+
+<ul>
+  <li>Height: <% if @user.height != nil %>
+                    <%= @user.height %>cm
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Weight: <% if @user.weight != nil %>
+                    <%= @user.weight %>KG
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Ethnicity: <% if @user.ethnicity != nil %>
+                    <%= @user.ethnicity %>
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Marital Status: <% if @user.marital_status != nil %>
+                    <%= @user.marital_status %>
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Number of Children: <% if @user.number_of_children != nil %>
+                    <%= @user.number_of_children %>
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Occupation: <% if @user.occupation != nil %>
+                    <%= @user.occupation %>
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Employment Status: <% if @user.employment_status != nil %>
+                    <%= @user.employment_status %>
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Education: <% if @user.education != nil %>
+                    <%= @user.education %>
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Religion: <% if @user.religion != nil %>
+                    <%= @user.religion %>
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Religious Values: <% if @user.religious_values != nil %>
+                    <%= @user.religious_values %>
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Do Drink?: <% if @user.drink != nil %>
+                    <%= @user.drink %>
+                 <% else %>
+                    N/A
+                 <% end %></li>
+
+  <li>Do Smoke?: <% if @user.smoke != nil %>
+                    <%= @user.smoke %>
+                 <% else %>
+                    N/A
+                 <% end %></li>
+</ul>
+
+<h1><%= @user.profile_heading %></h1>
+
+<h1>User Profile:<br></h1>
+<%= @user.user_profile %>
