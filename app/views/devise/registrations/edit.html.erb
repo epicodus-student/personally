@@ -108,6 +108,16 @@
   </div>
 
   <div class="field">
+    <%= f.label :profile_heading, "Your Profile Headline" %><br />
+    <%= f.text_field :profile_heading %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_profile, "Tell Us A Little About You & What You're Looking For" %><br />
+    <%= f.text_field :user_profile %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
@@ -120,16 +130,6 @@
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :profile_heading, "Your Profile Headline" %><br />
-    <%= f.text_field :profile_heading %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_profile, "Tell Us A Little About You & What You're Looking For" %><br />
-    <%= f.text_field :user_profile %>
   </div>
 
   <div class="actions">
