@@ -1,0 +1,1 @@
+"Bahá'í", "Buddhist", "Christian - Catholic", "Christian - Protestant", "Christian - Other",  "Hindu", "Islam", "Jainism", "Jewish", "Parsi", "Shintoism", "Sikhism", "Taoism", "Other", "No Religion", "Prefer Not To Say" 

@@ -41,6 +41,73 @@
   </div>
 
   <div class="field">
+    <%= f.label :height, "Height" %><br />
+    <%= f.select :height, (140..220).map {|i| [i,i] } %> cm
+  </div>
+
+  <div class="field">
+    <%= f.label :weight, "Weight" %><br />
+    <%= f.select :weight, (40..220).map {|i| [i,i] } %> kg
+  </div>
+
+  <div class="field">
+    <%= f.label :ethnicity, "Ethnicity" %><br />
+    <%= f.select :ethnicity, options_for_select([["Please Select", ""], "Asian", "Black", "Caucasian (White)", "Latino", "Indian", "Middle Eastern (Arab)", "Mixed", "Other"]) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :marital_status, "Marital Status" %><br />
+    <%= f.select :marital_status, options_for_select([["Please Select", ""], "Single", "Seperated", "Divorced", "Widowed", "Married"]) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :drink, "Do you drink?" %><br />
+    <%= f.select :drink, options_for_select([["Please Select", ""], "Do Drink", "Occassionally Drink", "Don't Drink"]) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number_of_children, "Number of Children" %><br />
+    <%= f.select :number_of_children, (0..10).map {|i| [i,i] } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :want_children, "Do you want children?" %><br />
+    <%= f.select :want_children, options_for_select([["Please Select", ""], "No", "Not Sure", "Yes"]) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :occupation, "Occupation" %><br />
+    <%= f.select :occupation, options_for_select([["Please Select", ""],  "Administrative / Secretarial / Clerical",
+                                                                          "Advertising / Media", "Artistic / Creative / Performance", "Construction / Trades", "Domestic Helper", "Education / Academic",
+                                                                          "Entertainment / Media", "Executive / Management / HR", "Farming / Agriculture", "Finance / Banking / Real Estate",
+                                                                          "Fire / Law Enforcement / Security", "Hair Dresser / Personal Grooming", "IT / Communications", "Laborer / Manufacturing", "Legal",
+                                                                          "Medical / Dental / Veterinary", "Military", "Nanny / Child care", "No Occupation", "Non-profit / Clergy / Social Services",
+                                                                          "Political / Government / Civil Service", "Retail / Food Services", "Retired", "Sales / Marketing", "Self-Employed", "Sports / Recreation",
+                                                                          "Student", "Technical / Science / Engineering", "Transportation", "Travel / Hospitality", "Unemployed", "Other"]) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :employment_status, "Employment Status" %><br />
+    <%= f.select :employment_status, options_for_select([["Please Select", ""], "Full-Time", "Part-Time", "Student", "Homemaker", "Retired", "Not Employed", "Prefer Not To Say"]) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :education, "Education Level" %><br />
+    <%= f.select :education, options_for_select([["Please Select", ""], "Primary School", "Middle School", "High School", "Vocational School", "Bachelor's Degree", "Master's Degree", "Doctorate / PHD", "Prefer Not To Say"]) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :religion, "Religion" %><br />
+    <%= f.select :religion, options_for_select([["Please Select", ""], "Bahá'í", "Buddhist", "Christian - Catholic", "Christian - Protestant", "Christian - Other",  "Hindu", "Islam", "Jainism", "Jewish", "Parsi",
+                                                                        "Shintoism", "Sikhism", "Taoism", "Other", "No Religion", "Prefer Not To Say" ]) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :religious_values, "Religious Values" %><br />
+    <%= f.select :religious_values, options_for_select([["Please Select", ""], "Not Religious", "Religious", "Very Religious"]) %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
@@ -53,6 +120,16 @@
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile_heading, "Your Profile Headline" %><br />
+    <%= f.text_field :profile_heading %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_profile, "Tell Us A Little About You & What You're Looking For" %><br />
+    <%= f.text_field :user_profile %>
   </div>
 
   <div class="actions">

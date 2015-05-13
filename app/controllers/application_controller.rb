@@ -13,7 +13,10 @@ class ApplicationController < ActionController::Base
     end
     devise_parameter_sanitizer.for(:account_update) do |u|
       u.permit :first_name, :last_name, :email, :password, :password_confirmation,
-      :seeking_sex_type, :country, :city, :current_password
+      :seeking_sex_type, :country, :city, :current_password, :height, :weight,
+      :ethnicity, :drink, :smoke, :marital_status, :children, :number_of_children,
+      :want_children, :occupation, :employment_status, :education, :religion,
+      :religious_values, :profile_heading, :user_profile
     end
   end
 end
