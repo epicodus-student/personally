@@ -4,6 +4,16 @@
 <h4>Seeking: <%= @user.seeking_sex_type %>s</h4>
 <h4>Last Active: <%= @user.last_sign_in_at %></h4>
 
+<p>
+  <%= image_tag @user.picture.url(:thumb) %>
+</p>
+
+<%- unless current_user.favorite_users.exists?(id: @user.id) -%>
+<%= link_to 'Add to favorites', favorite_users_path(favorited_id: @user), method: :post %>
+<%- else -%>
+<%= link_to 'Remove from favorites', favorite_user_path(@user), method: :delete %>
+<%- end -%>
+
 <ul>
   <li>Height: <% if @user.height != nil %>
                     <%= @user.height %>cm

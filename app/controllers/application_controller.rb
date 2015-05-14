@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
       :seeking_sex_type, :country, :city, :current_password, :height, :weight,
       :ethnicity, :drink, :smoke, :marital_status, :children, :number_of_children,
       :want_children, :occupation, :employment_status, :education, :religion,
-      :religious_values, :profile_heading, :user_profile
+      :religious_values, :profile_heading, :user_profile, :picture
     end
   end
 end
